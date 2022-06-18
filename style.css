@@ -1,17 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
 :root{
     --text: #fff;
     --primary: #E2101D;
+    --secondary: #c90c17;
 }
 
 *:focus-visible,
 *:active,
 *:focus{
     outline: none!important;
+    box-shadow: none!important;
 }
 
 body{
     position: relative;
     overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 button{
@@ -70,6 +76,28 @@ button{
     background-color: var(--text);
     color: var(--primary);
 }
+
+.section__upper--title{
+    font-size: 1.2rem;
+    color: var(--text);
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section__title{
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1;
+    letter-spacing: 1;
+    color: var(--text);
+}
+
 
 /* SEARCH Hidden Header */
 
@@ -224,7 +252,7 @@ button{
 
 
 /* Banner */
-.banner{
+section.banner{
     position: relative;
 }
 .banner__item{
@@ -301,19 +329,12 @@ button{
 
 
 /* Produtos */
-.products{
-    padding: 70px 0;
+section.products{
+    padding: 70px 0 120px;
     background-color: var(--primary);
     color: var(--text);
     position: relative;
     z-index: 3;
-}
-
-.section__title{
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 900;
-    margin-bottom: 30px;
 }
 
 .products__cats ul{
@@ -352,7 +373,7 @@ button{
 
 .product__item--content img{
     width: 100%;
-    height: auto;
+    height: 100%;
     max-height: 400px;
     object-fit: contain;
 }
@@ -361,9 +382,8 @@ button{
 
 
 /* Miscellaneous */
-.miscellaneous{
-    padding: 70px 0;
-    background-color: var(--primary);
+section.miscellaneous{
+    background-color: #c10c0b;
     color: var(--text);
     position: relative;
     z-index: 3;
@@ -371,18 +391,327 @@ button{
 
 .miscellaneous .row {
     flex-direction: row;
+    margin:auto;
 }
 .miscellaneous .row > div[class^="col-"]{
     order: var(--order);
 }
 
 .miscellaneous .-text{
-    background-color: blue;
+    text-align: center;
+    padding: 60px 40px 40px!important;
 }
 
-/* Miscellaneous */
+.miscellaneous .-text img.title__icon{
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+}
 
+.miscellaneous .-text h2{
+    font-size: 4rem;
+    position: relative;
+    font-family: 'Dancing Script', sans-serif;
+    margin-bottom: 15px;
+}
+.miscellaneous .-text h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 1px;
+    background-color: var(--text);
+}
+
+
+.miscellaneous .-text p{
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+.miscellaneous .-text .btn_3{
+    margin-top: 15px;
+}
+
+.miscellaneous .misc__item.-images a{
+    transition: all .4s ease;
+}
+.miscellaneous .misc__item.-images a:hover{
+    filter: brightness(.6);
+}
+.miscellaneous .misc__item.-images a:hover img{
+    transform: scale(1.1);
+
+}
+
+.miscellaneous .misc__item figure{
+    margin: 0;
+    padding: 0;
+    display: block;
+    min-height: 400px;
+    height: 100%;
+    overflow: hidden;
+}
+.miscellaneous .misc__item img:not(.title__icon){
+    width: 100%;
+    height: 100%;
+    transition: all .25s ease;
+    object-fit: cover;
+}
+
+/* Remover Padding das col-* */
 .nopadding{
     padding-left: 0!important;
     padding-right: 0!important;
 }
+/* Miscellaneous */
+
+
+/* About */
+section.about{
+    background-color: var(--primary);
+    padding: 120px 0;
+}
+
+.about .section__title::after{
+    position: relative;
+    display: block;
+    width: 85px;
+    height: 2px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    content: "";
+    background: #fff;
+}
+
+.about .about__content p{
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.56;
+    max-width: 1080px;
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    color: #fff;
+}
+
+.about .about__button {
+    margin-top: 60px;
+    text-align: center;
+}
+/* About */
+
+
+/* Call To Action */
+.cta{
+    background-color: var(--primary);
+    padding: 140px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cta .cta__content{
+    max-width: 450px;
+    text-align: left;
+}
+
+.cta .cta__content .section__title{
+    text-align: left;
+    color: var(--primary);
+}
+
+.cta .cta__content p{
+    color: #333;
+    font-weight: 500;
+}
+/* Call To Action */
+
+
+/* Footer */
+footer{
+    position: relative;
+    background-color: var(--secondary);
+    padding-top: 60px;
+    color: var(--text);
+}
+footer a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--text);
+}
+
+footer .footer-wave{
+    position: absolute;
+    bottom: calc(100% - 2px);
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    margin: 0;
+}
+
+footer .footer-wave .footer__img--emphasis{
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+footer .footer-wave > img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.footer__logo{
+    display: block;
+    margin: 0 auto 30px;
+}
+.footer__logo figure{
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: 65px;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.footer__logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer__title{
+    font-size: 1rem;
+    letter-spacing: .1em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.footer__title i{
+    font-size: 1.5rem;
+}
+
+.footer__menu ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 40px;
+}
+.footer__menu ul li{
+    list-style: none;
+}
+
+.footer__menu ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--text);
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+.footer__address p,
+.social__media p,
+footer .footer__newsletter p{
+    color: var(--text);
+    font-size: .8rem;
+    margin-bottom: 10px;
+    
+}
+
+.social__media ul{
+    padding: 0px;
+    padding-left: 10px;
+    display: flex;
+    column-gap: 5px;
+}
+.social__media ul li{
+    list-style: none;
+}
+.social__media ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    border: 2px solid var(--text);
+    transition: all .4s ease;
+    text-decoration: none;
+}
+
+footer .social__media ul li a:hover{
+    color: var(--primary);
+    background-color: var(--text);
+}
+
+
+footer .newsletter__form input{
+    border-radius: 100vmax;
+    transition: all .4s ease;
+    font-size: .75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 41px;
+    min-height: 43px;
+    padding: 5px 20px;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: transparent;
+}
+footer .newsletter__form input::placeholder{
+    color: #fff;
+}
+footer .newsletter__form input:focus {
+    color: #e1101c;
+    border: 2px solid #fff;
+    background-color: #fff;
+}
+
+.newsletter__button {
+    font-size: .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 5px 0 0;
+    padding: 0;
+    cursor: pointer;
+    text-align: right;
+    color: #fff;
+    border: none;
+    background: transparent;
+    padding-right: 10px;
+}
+.newsletter__button i{
+    margin-left: 5px;
+}
+/* Footer */
+
+/* Copyright */
+.copyright {
+    font-size: .8rem;
+    display: block;
+    padding: 15px 0;
+    background: #c10c0b;
+    color: var(--text);
+}
+
+.copyright .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: 500;
+}
+/* Copyright */
