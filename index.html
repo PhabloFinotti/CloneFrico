@@ -8,14 +8,17 @@
     <title>Clone Frico</title>
     </script>
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5272LF4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-grid.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="js/jquery.js"></script>
     <script src="js/efeitos.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -24,9 +27,9 @@
         <div class="container">
             <form method="get" action="">
                 <label>
-                    <input type="text" value="" name="s" size="10" placeholder="Digite sua busca"> 
+                    <input type="text" value="" name="s" size="10" placeholder="Digite sua busca">
                 </label>
-                <input type="hidden" name="post_type" value="product"> 
+                <input type="hidden" name="post_type" value="product">
                 <button type="button" class="search-absolute__close">
                     <i class="fa fa-times"></i>
                 </button>
@@ -39,7 +42,8 @@
         <div class="container">
             <div class="header__logo">
                 <a href="https://fricoalimentos.com.br" title="Fricó Alimentos">
-                    <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/logo.png" alt="Logo Fricó">
+                    <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/logo.png"
+                        alt="Logo Fricó">
                 </a>
             </div>
             <!-- begin::Menu Hamburger -->
@@ -47,7 +51,7 @@
                 <span></span>
                 <span></span>
                 <span></span>
-                <span></span> 
+                <span></span>
             </button>
             <!-- end::Menu Hamburger -->
             <nav class="navbar navbar-expand-lg">
@@ -72,14 +76,14 @@
                 </div>
             </nav>
             <div class="header__search">
-                <button type="button" class="open__search--header"> 
+                <button type="button" class="open__search--header">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
         </div>
     </header>
     <!-- end::Header -->
-    
+
     <!-- begin::Banner -->
     <section class="banner">
         <div class="banner__item">
@@ -93,92 +97,260 @@
                 <div class="container">
                     <div class="banner__content--inner">
                         <h2>DA NOSSA CASA PARA A SUA</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit perspiciatis tempore illum similique error.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit perspiciatis tempore
+                            illum similique error.</p>
                         <a class="btn btn_2" href="" target="_blank">Saiba Mais</a>
                     </div>
                 </div>
             </div>
         </div>
         <figure class="bg__shape">
-            <img src="https://fricoalimentos.com.br/wp-content/uploads/layerslider/slider-home/banner-divider.svg" alt="">
+            <img src="https://fricoalimentos.com.br/wp-content/uploads/layerslider/slider-home/banner-divider.svg"
+                alt="">
         </figure>
     </section>
     <!-- end::Banner -->
 
     <!-- begin::Produtos -->
-    <section class="product-sec">
+    <section class="products">
         <div class="container">
-            <h2 class="heading product-sec__heading"> Nossos Produtos</h2>
-            <div class="product-cats"> 
-                <ul id="" class="custom-select nav-tabs" style="display: none;">
-                    <li class="nav-item">Selecione a categoria</li>
-                    <li class="nav-item">Todos</li>
-                    <li class="nav-item"> Linguiças</li>
-                    <li class="nav-item"> Defumados</li>
-                    <li class="nav-item"> Frios</li>
-                    <li class="nav-item"> Molhos</li>
+            <h2 class="section__title"> Nossos Produtos</h2>
+            <div class="products__cats">
+                <ul id="" class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link btn_3 active" id="todos-tab" data-toggle="tab" href="#todos" role="tab"
+                            aria-controls="todos" aria-selected="true">Todos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn_3" id="linguicas-tab" data-toggle="tab" href="#linguicas" role="tab"
+                            aria-controls="linguicas" aria-selected="false">Linguiças</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn_3" id="defumados-tab" data-toggle="tab" href="#defumados" role="tab"
+                            aria-controls="defumados" aria-selected="false">Defumados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn_3" id="frios-tab" data-toggle="tab" href="#frios" role="tab"
+                            aria-controls="frios" aria-selected="false">Frios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn_3" id="molhos-tab" data-toggle="tab" href="#molhos" role="tab"
+                            aria-controls="molhos" aria-selected="false">Molhos</a>
+                    </li>
                 </ul>
             </div>
-            <div class="tabs">
-                <div class="tab-content" id="categoria-1">
-                    <div class="product-slider-item__image">
-                        <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/" title="Apresuntado 3,6kg">
-                            <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E">
-                        </a>
-                    </div>
-                    <div class="product-slider-item__title"> 
-                        <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/" title="Apresuntado 3,6kg">Apresuntado 3,6kg</a>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="todos" role="tabpanel" aria-labelledby="todos-tab">
+                    <div class="products__wrapper">
+                        <!-- Item -->
+                        <div class="product__item">
+                            <div class="product__item--content">
+                                <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/"
+                                    title="Apresuntado 3,6kg">
+                                    <img
+                                        src="https://fricoalimentos.com.br/wp-content/uploads/2019/12/linguica-mista-churrasco-5kg-thumb.jpg">
+                                </a>
+                                <div class="product__title">
+                                    <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/"
+                                        title="Apresuntado 3,6kg">Apresuntado 3,6kg</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="product__item center">
+                            <div class="product__item--content">
+                                <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/"
+                                    title="Apresuntado 3,6kg">
+                                    <img
+                                        src="https://fricoalimentos.com.br/wp-content/uploads/2019/12/linguica-mista-churrasco-5kg-thumb.jpg">
+                                </a>
+                                <div class="product__title">
+                                    <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/"
+                                        title="Apresuntado 3,6kg">Apresuntado 3,6kg</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="product__item">
+                            <div class="product__item--content">
+                                <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/"
+                                    title="Apresuntado 3,6kg">
+                                    <img
+                                        src="https://fricoalimentos.com.br/wp-content/uploads/2019/12/linguica-mista-churrasco-5kg-thumb.jpg">
+                                </a>
+                                <div class="product__title">
+                                    <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/"
+                                        title="Apresuntado 3,6kg">Apresuntado 3,6kg</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Outra Tab -->
+                <div class="tab-pane fade" id="linguicas" role="tabpanel" aria-labelledby="linguicas-tab">
+                    <div class="products__wrapper">
+                        <!-- Item -->
+                        <div class="product__item">
+                            <div class="product__item--content">
+                                <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/"
+                                    title="Apresuntado 3,6kg">
+                                    <img
+                                        src="https://fricoalimentos.com.br/wp-content/uploads/2019/12/linguica-mista-churrasco-5kg-thumb.jpg">
+                                </a>
+                                <div class="product__title">
+                                    <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/"
+                                        title="Apresuntado 3,6kg">Apresuntado 3,6kg</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="product__item center">
+                            <div class="product__item--content">
+                                <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/"
+                                    title="Apresuntado 3,6kg">
+                                    <img
+                                        src="https://fricoalimentos.com.br/wp-content/uploads/2019/12/linguica-mista-churrasco-5kg-thumb.jpg">
+                                </a>
+                                <div class="product__title">
+                                    <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/"
+                                        title="Apresuntado 3,6kg">Apresuntado 3,6kg</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="product__item">
+                            <div class="product__item--content">
+                                <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/"
+                                    title="Apresuntado 3,6kg">
+                                    <img
+                                        src="https://fricoalimentos.com.br/wp-content/uploads/2019/12/linguica-mista-churrasco-5kg-thumb.jpg">
+                                </a>
+                                <div class="product__title">
+                                    <a href="https://fricoalimentos.com.br/produto/apresuntado-3-6kg/"
+                                        title="Apresuntado 3,6kg">Apresuntado 3,6kg</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </section>
     <!-- end::Produtos -->
-    
+
     <!-- begin::Sem Nome -->
-    <section class="grid-sec">
-        <div class="grid-sec__item -text">
-            <div class="grid-sec__inside">
-                <div class="grid-sec__item-big">
-                    <i class="icon-hat"></i>
-                    <span>Receitas</span>
-                </div>
-                <div class="grid-sec__item-text"> Sabor e qualidade você encontra nos Produtos Fricó!</div>
-                    <div class="grid-sec__item-action"> 
-                    <a href="https://fricoalimentos.com.br/receitas/" class="button -outline-white"> VER TODAS AS RECEITAS <i class="icon-arrow-right"></i> </a>
+    <section class="miscellaneous">
+        <div class="row">
+            <div class="col-4 -text nopadding" style="--order:2;">
+                <div class="misc__item">
+                    <div class="grid-sec__item-big">
+                        <i class="icon-hat"></i>
+                        <span>Receitas</span>
+                    </div>
+                    <div class="grid-sec__item-text"> Sabor e qualidade você encontra nos Produtos Fricó!</div>
+                    <div class="grid-sec__item-action">
+                        <a href="https://fricoalimentos.com.br/receitas/" class="button -outline-white"> VER TODAS AS
+                            RECEITAS <i class="icon-arrow-right"></i> </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="grid-sec__item"> 
-            <a href="https://fricoalimentos.com.br/panelinha-de-linguica/"> 
-                <span class="grid-sec__item-absolute"></span> 
-                <!-- <img src="https://fricoalimentos.com.br/wp-content/uploads/2020/11/03102020-_TXF1613-scaled.jpg" alt="image receita"> -->
-            </a>
+            <div class="col-4 nopadding" style="--order:1;">
+                <div class="misc__item">
+                    <div class="grid-sec__item-big">
+                        <i class="icon-hat"></i>
+                        <span>Receitas</span>
+                    </div>
+                    <div class="grid-sec__item-text"> Sabor e qualidade você encontra nos Produtos Fricó!</div>
+                    <div class="grid-sec__item-action">
+                        <a href="https://fricoalimentos.com.br/receitas/" class="button -outline-white"> VER TODAS AS
+                            RECEITAS <i class="icon-arrow-right"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 nopadding" style="--order:3;">
+                <div class="misc__item">
+                    <div class="grid-sec__item-big">
+                        <i class="icon-hat"></i>
+                        <span>Receitas</span>
+                    </div>
+                    <div class="grid-sec__item-text"> Sabor e qualidade você encontra nos Produtos Fricó!</div>
+                    <div class="grid-sec__item-action">
+                        <a href="https://fricoalimentos.com.br/receitas/" class="button -outline-white"> VER TODAS AS
+                            RECEITAS <i class="icon-arrow-right"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 nopadding" style="--order:4;">
+                <div class="misc__item">
+                    <div class="grid-sec__item-big">
+                        <i class="icon-hat"></i>
+                        <span>Receitas</span>
+                    </div>
+                    <div class="grid-sec__item-text"> Sabor e qualidade você encontra nos Produtos Fricó!</div>
+                    <div class="grid-sec__item-action">
+                        <a href="https://fricoalimentos.com.br/receitas/" class="button -outline-white"> VER TODAS AS
+                            RECEITAS <i class="icon-arrow-right"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 nopadding" style="--order:5;">
+                <div class="misc__item">
+                    <div class="grid-sec__item-big">
+                        <i class="icon-hat"></i>
+                        <span>Receitas</span>
+                    </div>
+                    <div class="grid-sec__item-text"> Sabor e qualidade você encontra nos Produtos Fricó!</div>
+                    <div class="grid-sec__item-action">
+                        <a href="https://fricoalimentos.com.br/receitas/" class="button -outline-white"> VER TODAS AS
+                            RECEITAS <i class="icon-arrow-right"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 nopadding" style="--order:6;">
+                <div class="misc__item">
+                    <div class="grid-sec__item-big">
+                        <i class="icon-hat"></i>
+                        <span>Receitas</span>
+                    </div>
+                    <div class="grid-sec__item-text"> Sabor e qualidade você encontra nos Produtos Fricó!</div>
+                    <div class="grid-sec__item-action">
+                        <a href="https://fricoalimentos.com.br/receitas/" class="button -outline-white"> VER TODAS AS
+                            RECEITAS <i class="icon-arrow-right"></i> </a>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
     <!-- end::Sem Nome -->
-    
+
     <!-- begin::Sobre nos -->
     <section class="about-sec">
         <div class="container">
             <h2 class="about-sec__small-title"> A FRICÓ ALIMENTOS</h2>
             <div class="heading about-sec__heading"> Produtos saborosos e de primeira qualidade!</div>
-                <div class="about-sec__content">
-                    <p>
-                        <span style="font-weight: 400;">Mais que entregar produtos de alta qualidade, nós temos o objetivo de
-                            proporcionar momentos inesquecíveis em família, pessoas queridas ao redor da mesa faz uma
-                            simples refeição tornar-se mágica!
-                        </span>
-                    </p>
-                </div>
+            <div class="about-sec__content">
+                <p>
+                    <span style="font-weight: 400;">Mais que entregar produtos de alta qualidade, nós temos o objetivo
+                        de
+                        proporcionar momentos inesquecíveis em família, pessoas queridas ao redor da mesa faz uma
+                        simples refeição tornar-se mágica!
+                    </span>
+                </p>
+            </div>
             <div class="about-sec__action">
-                <a href="https://fricoalimentos.com.br/quem-somos/" class="button -outline-white"> NOSSA HISTÓRIA <i class="icon-arrow-right"></i> </a>
+                <a href="https://fricoalimentos.com.br/quem-somos/" class="button -outline-white"> NOSSA HISTÓRIA <i
+                        class="icon-arrow-right"></i> </a>
             </div>
         </div>
     </section>
     <!-- end::Sobre nos -->
-    
-    
+
+
     <!-- begin::Call To Action -->
     <section class="call-to-action">
         <div class="container">
@@ -186,20 +358,23 @@
         </div>
     </section>
     <!-- end::Call To Action -->
-    
+
     <!-- begin::Footer Wave -->
     <div class="footer-wave -absolute ">
         <div class="container">
             <div class="footer-wave__leafs">
-                <div class="footer-wave__leaf1"> 
-                    <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/folha02.png" alt="Folha">
+                <div class="footer-wave__leaf1">
+                    <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/folha02.png"
+                        alt="Folha">
                 </div>
                 <div class="footer-wave__leaf2">
-                    <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/folha01.png" alt="Folha">
+                    <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/folha01.png"
+                        alt="Folha">
                 </div>
             </div>
-        </div> 
-        <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/faixa-footer.svg" alt="Wave">
+        </div>
+        <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/faixa-footer.svg"
+            alt="Wave">
     </div>
     <!-- end::Footer Wave -->
 
@@ -207,8 +382,9 @@
     <footer class="footer -relative">
         <div class="container">
             <div class="footer__col -one">
-                <div class="footer__logo"> 
-                    <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/logo-footer.svg" alt="Logo Fricó Alimentos">
+                <div class="footer__logo">
+                    <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/logo-footer.svg"
+                        alt="Logo Fricó Alimentos">
                 </div>
             </div>
             <div class="footer__col -two">
@@ -250,7 +426,7 @@
                 <div class="footer-widget">
                     <div class="footer-widget__content">
                         <p>Fiquem ligados em nossas redes!</p>
-                        <div class="social -footer"> 
+                        <div class="social -footer">
                             <a href="" target="_blank"><i class="icon-facebook"></i></a>
                             <a href="" target="_blank"><i class="icon-instagram"></i></a>
                             <a href="" target="_blank"><i class="icon-youtube-play"></i></a>
@@ -259,7 +435,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer__col -six">
                 <div class="footer-widget">
                     <h3 class="footer-widget__title"><i class="icon-envelope"></i> Cadastre-se</h3>
@@ -267,8 +443,10 @@
                         <p>Receba novidades no seu e-mail!</p>
                         <div class="newsletter">
                             <form action="https://fricoalimentos.com.br/ouvidoria/func/newsletter.php" method="post">
-                                <div class="newsletter__form"> <input type="email" required="" minlength="5" name="newsletter" class="form-control -outline" placeholder="Digite seu e-mail">
-                                </div> <button class="newsletter__button" type="submit"> ENVIAR <i class="icon-arrow-right"></i> </button>
+                                <div class="newsletter__form"> <input type="email" required="" minlength="5"
+                                        name="newsletter" class="form-control -outline" placeholder="Digite seu e-mail">
+                                </div> <button class="newsletter__button" type="submit"> ENVIAR <i
+                                        class="icon-arrow-right"></i> </button>
                             </form>
                         </div>
                     </div>
@@ -277,11 +455,12 @@
         </div>
     </footer>
     <!-- end::Footer -->
-    
+
     <!-- begin::Copyright -->
     <div class="copyright">
         <div class="container">
-            <div class="copyright__col -left"> © Copyright 2022 Clone Fricó Alimentos. Todos os direitos reservados</div>
+            <div class="copyright__col -left"> © Copyright 2022 Clone Fricó Alimentos. Todos os direitos reservados
+            </div>
         </div>
     </div>
     <!-- end::Copyright -->
