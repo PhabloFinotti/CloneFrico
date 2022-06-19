@@ -24,16 +24,18 @@ $(function() {
         var attrHref = $(this).attr('href');
 
         if(!alreadyActive.includes(attrHref)){
-            alreadyActive.push(attrHref);
-            
-            new Glide(attrHref, {
-                perView: 3,
-                type: "slider",
-                // autoplay: 10000,
-                gap: 0,
-                perTouch: 1,
-                focusAt: 1
-            }).mount();
+            setTimeout(function(){
+                alreadyActive.push(attrHref);
+                
+                new Glide(attrHref, {
+                    perView: 3,
+                    type: "slider",
+                    // autoplay: 10000,
+                    gap: 0,
+                    perTouch: 1,
+                    focusAt: 1
+                }).mount();
+            }, 300)
         }
 
     })

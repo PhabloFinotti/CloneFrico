@@ -26,6 +26,9 @@ button{
     background-color: unset;
 }
 
+figure{
+    margin: 0;
+}
 
 .btn_1{
     border: 2px solid var(--primary);
@@ -77,6 +80,24 @@ button{
     color: var(--primary);
 }
 
+.btn_4{
+    border: 2px solid #fff;
+    color: var(--primary);
+    background-color: #fff;
+    border-radius: 100vmax;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    text-transform: uppercase;
+}
+.btn_4:hover,
+.btn_4.active{
+    background-color: var(--primary);
+    color: #fff;
+}
+
 .section__upper--title{
     font-size: 1.2rem;
     color: var(--text);
@@ -101,18 +122,20 @@ button{
 
 /* SEARCH Hidden Header */
 
-/* TEMP */
 .search__absolute{
-    display: none;    
-}
-.search__absolute{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #fff;
-    z-index: 1;
+    z-index: 99999;
+    transform: translateY(-100%);
+    transition: all .4s ease;
 }
+.search__absolute.-active {
+    transform: translateY(0);
+}
+
 .search__absolute form,
 .search__absolute label,
 .search__absolute input {
@@ -814,6 +837,31 @@ footer .newsletter__form input:focus {
 .glide__bullets .glide__bullet--active{
     background-color: #fff;
 }
-
-
 /* Carrossel */
+
+
+/* Breadcrumbs */
+.banner__breadcrumbs figure{
+    height: 560px;
+    width: 100%;
+}
+
+.banner__breadcrumbs img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* Breadcrumbs */
+
+
+/* Scrollbar */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+} 
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Scrollbar */
