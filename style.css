@@ -525,7 +525,8 @@ section.about{
 /* Call To Action */
 .cta{
     background-color: var(--primary);
-    padding: 140px 0;
+    padding: 140px 0px;
+    height: 750px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -533,6 +534,7 @@ section.about{
 
 .cta .cta__content{
     max-width: 450px;
+    margin-left: calc(100% - 90%);
     text-align: left;
 }
 
