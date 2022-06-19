@@ -1,47 +1,41 @@
-$(document).ready(function() {
-
-
-	$(".wq-carousel_depoimentos").owlCarousel({
-		items:1,
-		loop:true,
-		nav: false,
-		autoplay:true,
-		autoplayTimeout:5000,
-		autoplayHoverPause:true,
-		smartSpeed:1000,
-		navText: [ '<span class="flaticon-arrow-left"></span>', '<span class="flaticon-arrow-right"></span>' ]
-	});
-
-	$(".wq-carousel_treinamentos").owlCarousel({
-		loop:false,
-		nav: false,
-		navText: [ '<span class="flaticon-arrow-left"></span>', '<span class="flaticon-arrow-right"></span>' ],
-		responsiveClass:true,
-		smartSpeed:550,
-		autoplay:true,
-		autoplayTimeout:5000,
-		autoplayHoverPause:true,
-		responsiveClass:true,
-		responsive:{
-			0:{
-				items:1,
-				margin: 10
-			},
-			500:{
-				items:2,
-				margin: 15
-			},
-			740:{
-				items:3,
-				margin: 20
-			},
-			1000:{
-				items:3,
-				margin: 35
-			}
-		}
-	});
+$(function() {
+    new Glide(".banner", {
+        perView: 1,
+        type: "slider",
+        autoplay: 10000,
+        gap: 0
+    }).mount();
 
 
 
-});
+    // Mounts first products carousel listing all items
+    new Glide("#todos", {
+        perView: 3,
+        type: "slider",
+        // autoplay: 10000,
+        gap: 0,
+        perTouch: 1,
+        focusAt: 1
+    }).mount();
+    var alreadyActive = ['#todos']
+    
+    // Builds the rest, on click, of the products carousel
+    $('.products__cats .nav-link').on('click', function(){
+        var attrHref = $(this).attr('href');
+
+        if(!alreadyActive.includes(attrHref)){
+            alreadyActive.push(attrHref);
+            
+            new Glide(attrHref, {
+                perView: 3,
+                type: "slider",
+                // autoplay: 10000,
+                gap: 0,
+                perTouch: 1,
+                focusAt: 1
+            }).mount();
+        }
+
+    })
+    
+})

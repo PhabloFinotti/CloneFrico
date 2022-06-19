@@ -181,7 +181,20 @@ button{
     display: none;
     position: relative;
     z-index: 15;
-    margin: 0 20px 0 auto;
+    margin: 0 -20px 0 auto;
+}
+.hamburger span {
+    border-radius: 5px;
+    transition: all .4s ease;
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin-left: auto;
+    background: #fff;
+}
+
+.hamburger span:nth-child(2), .hamburger span:not(:first-child) {
+    margin: 5px 0 5px auto;
 }
 
 .navbar {
@@ -271,8 +284,8 @@ section.banner{
 }
 .banner .banner__item figure.banner__item--emphasis{
     position: absolute;
-    bottom: 5%;
-    left: 5%;
+    bottom: clamp(13%, 17%, 20%);
+    left: clamp(5%, 7%, 8%);
     z-index: 2;
 }
 .banner .banner__item figure.banner__item--emphasis img{
@@ -313,7 +326,8 @@ section.banner{
 
 .bg__shape{
     position: absolute;
-    bottom: -25%;
+    bottom: -30%;
+    
     left: 0;
     width: 100%;
     height: auto;
@@ -342,22 +356,24 @@ section.products{
     justify-content: center;
     align-items: center;
     column-gap: 9px;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
 }
 
-.products__wrapper{
+/* .products__wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 .product__item{
     text-align: center;
     transition: all .4s ease;
 }
-.product__item.center img{
+.products .glide__slide--active .product__item--content img,
+.products .becoming-active .product__item--content img{
     transform: scale(1.3);
 }
-.product__item.center .product__title{
+.products .glide__slide--active .product__item--content .product__title,
+.products .becoming-active .product__item--content .product__title{
     margin-top: 50px;
 }
 
@@ -376,6 +392,7 @@ section.products{
     height: 100%;
     max-height: 400px;
     object-fit: contain;
+    transition: all .25s ease;
 }
 
 /* Produtos */
@@ -568,7 +585,7 @@ footer .footer-wave > img{
 
 .footer__logo{
     display: block;
-    margin: 0 auto 30px;
+    margin: 0 auto 55px;
 }
 .footer__logo figure{
     display: block;
@@ -715,3 +732,86 @@ footer .newsletter__form input:focus {
     font-weight: 500;
 }
 /* Copyright */
+
+
+
+/* Carrossel */
+
+.glide {
+    display: flex;
+    align-items: center;
+}
+
+.glide__track {
+    flex: 1;
+}
+
+.glide__slides {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glide__arrows {
+    padding: 5px;
+}
+
+
+.banner__carousel--controls{
+    color: #fff;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner:hover .banner__carousel--controls button{
+    opacity: 1;
+}
+.banner__carousel--controls button{
+    opacity: 0;
+    font-size: 26px;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: var(--text);
+    margin: 0 15px;
+    transition: all .4s ease;
+}
+
+.banner__carousel--controls button:hover{
+    background-color: var(--secondary);
+}
+
+
+.glide__bullets{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    display: flex;
+    column-gap: 10px;
+}
+
+.glide__bullets .glide__bullet{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+.glide__bullets .glide__bullet--active{
+    background-color: #fff;
+}
+
+
+/* Carrossel */
