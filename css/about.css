@@ -3,16 +3,14 @@
     position: relative;
 }
 
-.about__content--wrapper .about__left .about__left--content{
-    max-width: 330px;
-    min-width: 330px;
-}
-
 .about__content--wrapper .about__left{
-    padding: 20px 40px 20px 150px;
+    padding: 20px 40px 60px 9vw;
     background-color: var(--primary);
     text-align: justify;
     color: var(--text);
+    flex: 0 0 34%;
+    display: block;
+    max-width: 32%;
 }
 
 .about__left .section__upper--title{
@@ -49,21 +47,25 @@
 }
 
 .about__right{
-    max-width: 340px;
-    min-width: 340px;
     text-align: justify;
     margin-top: 150px;
     margin-left: 40px;
+    margin-right: 25px;
     color: #5c5c5c;
+    display: block;
+    flex: 0 0 32%;
+    width: 100%;
+    max-width: 30vw;
 }
 
 .about__image{
+    max-width: 32%;
+    flex: 0 0 32%;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
     z-index: -1;
-    width: 32%;
 }
 
 .about__image figure{
@@ -75,3 +77,110 @@
     width: 100%;
     height: 100%;
 }
+
+
+/* Mission Vision and Values */
+.mission__values{
+    padding: 100px 0;
+    background-color: var(--secondary);
+    color: var(--text);
+}
+
+.mission__values .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    column-gap: 140px;
+}
+
+.mission__values .nav li{
+    list-style: none;
+}
+
+.mission__values .nav li a{
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.mission__values .nav li a span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 60px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.mission__values .nav li a.active span{
+    color: var(--secondary);
+    background-color: white;
+}
+
+
+.mission__values .tab-content{
+    text-align: center;
+}
+
+.mission__values .tab-content h2{
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+/* mission__values */
+
+
+/* Principles */
+.principles{
+    padding: 100px 0;
+}
+
+.principles h2{
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.principle__item{
+    transition: all .4s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 6px 50px -12px rgb(0 0 0 / 8%);
+}
+
+.principle__item:hover{
+    transition: all .4s ease;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.principle__item figure{
+    transition: all .4s;
+    margin-bottom: 30px;
+}
+
+.principle__item p{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0 auto;
+    text-align: center;
+    color: #5c5c5c;
+}
+/* Principles */
