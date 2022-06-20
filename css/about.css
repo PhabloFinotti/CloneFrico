@@ -4,7 +4,7 @@
 }
 
 .about__content--wrapper .about__left{
-    padding: 20px 40px 60px 9vw;
+    padding: 0px 40px 60px 9vw;
     background-color: var(--primary);
     text-align: justify;
     color: var(--text);
@@ -184,3 +184,35 @@
     color: #5c5c5c;
 }
 /* Principles */
+
+
+/* More Info */
+.more__info{
+    position: relative;
+    width: 100%;
+    height: 730px;
+    margin-top: 100px;
+    margin-bottom: 250px;
+    background: url(https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/qualidade.jpg) no-repeat;
+    background-position: 100%;
+    background-size: contain;
+}
+.more__info--item{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 640px;
+    margin-top: 45px;
+    padding: 40px;
+    opacity: .96;
+    border-radius: 20px;
+    background-color: #e1101c;
+}
+
+.more__info--item p{
+    font-size: 1.75rem;
+    color: var(--text);
+    text-align: center;
+}
+/* More Info */

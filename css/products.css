@@ -1,0 +1,48 @@
+.products__page{
+    background-color: var(--primary);
+    padding-bottom: 180px;
+}
+
+
+.products__top--bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.products__top--bar .title__page{
+    color: var(--text);
+    margin-right: 25px;
+}
+
+
+.products__top--bar > .categories__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products__top--bar .products__cats ul{
+    margin-bottom: 0;
+}
+
+.products__top--bar .header__search button{
+    color: var(--text);
+}
+
+.products__list .product__item{
+    margin-bottom: 50px;
+} 
+.products__list .product__item:hover img{
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+} 
+
+.products__list .product__title{ 
+    margin-top: 15px;
+}
+.products__list .product__title a{
+    font-size: 1.2rem;
+} 
