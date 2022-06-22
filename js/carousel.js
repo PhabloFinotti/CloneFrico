@@ -18,7 +18,13 @@ $(function() {
             // autoplay: 10000,
             gap: 0,
             perTouch: 1,
-            focusAt: 1
+            focusAt: 1,
+            breakpoints: {
+                587: {
+                    perView: 1,
+                    focusAt: 0
+                }
+            }
         }).mount();
         var alreadyActive = ['#todos']
         
@@ -36,7 +42,13 @@ $(function() {
                         // autoplay: 10000,
                         gap: 0,
                         perTouch: 1,
-                        focusAt: 1
+                        focusAt: 1,
+                        breakpoints: {
+                            587: {
+                                perView: 1,
+                                focusAt: 0
+                            }
+                        }
                     }).mount();
                 }, 300)
             }

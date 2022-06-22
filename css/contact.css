@@ -1,0 +1,211 @@
+.contact__top{
+    background: linear-gradient(90deg,#e1101c,#e1101c 50%,#fff 0);
+}
+
+/* Column Left */
+.contact__content .column__left h2{
+    color: var(--text);
+}
+.contact__content .column__left p{
+    font-weight: 300;
+    line-height: 1.6;
+    margin-top: 30px;
+    margin-right: 60px;
+    text-align: justify;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 0.2px;
+}
+
+.contact__content .column__left .btn{
+    padding: 12px 25px;
+    border: 2px solid var(--text);
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.contact__content .column__left .btn:hover{
+    border-color: var(--primary);
+}
+/* Column Left */
+
+/* Column Right */
+.contact__content .column__right{
+    font-weight: 300;
+    line-height: 1.6;
+    margin-left: 60px;
+    text-align: justify;
+    color: #5c5c5c;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 0.2px;
+}
+
+.contact__content .column__right > .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.contact__content .column__right h3{
+    color: var(--primary);
+    margin-top: 7px;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+
+.contact__content .column__right .row a{
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.contact__content .column__right .contact__links--cards{
+    font-weight: 300;
+    line-height: 1.2;
+    margin-top: 15px;
+    text-align: center;
+    color: #e1101c;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 0.3px;
+    transition: all .3s ease;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 190px;
+    border: 2px solid #e1101c;
+    border-radius: 20px;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.contact__content .column__right .contact__links--cards figure{
+    margin-bottom: 10px;
+    height: auto;
+    width: 75%;
+}
+.contact__content .column__right .contact__links--cards figure img{
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+}
+
+.contact__content .column__right .contact__links--cards:hover{
+    transform: scale(1.1);
+}
+/* Column Right */
+
+/* Form */
+.contact__form{
+    position: relative;
+    padding: 100px 0 60px;
+    background-color: #ce0f1a;
+}
+
+.contact__form--info {
+    margin-right: 80px;
+    color: var(--text);
+}
+
+.contact__form--info .contact__item {
+    margin-bottom: 30px;
+}
+
+.contact__form--info .contact__item a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--text);
+}
+.contact__form--info .contact__item a:hover{
+    text-decoration: underline;
+}
+
+.contact__form--info .contact__item p i{
+    font-size: 1.3rem;
+    vertical-align: middle;
+}
+
+.contact__form .form__side h3{
+    color: var(--text);
+    margin-top: 7px;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+form .input__text {
+    position: relative;
+}
+
+form .input__text input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    transition: all .4s ease;
+}
+form .input__text label,
+form textarea ~ label {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text);
+    pointer-events: none;
+    transition: .5s;
+}
+
+form .input__text input:focus,
+form select:focus,
+form textarea:focus{
+    border-bottom: 1px solid var(--text);
+}
+form .input__text input:focus ~ label{
+    top: -20px;
+    left: 15px;
+    color: var(--text);
+    font-size: 12px;
+}
+
+form textarea{
+    margin-top: 15px;
+}
+form textarea ~ label{
+    font-size: 12px!important;
+    top: -5px!important;
+    left: 15px!important;
+}
+
+form button[type="submit"]{
+    display: block;
+    margin: 0 auto;
+}
+/* Form */
+
+
+/* Map */
+.map{
+    background-color: #ce0f1a;
+}
+.map h2{
+    color: var(--text);
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.map iframe{
+    height: 800px;
+    width: 100%;
+}
+/* Map */

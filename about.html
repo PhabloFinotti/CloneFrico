@@ -17,12 +17,13 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="css/about.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
 
     <script defer src="js/jquery.js"></script>
     <script defer src="js/efeitos.js"></script>
     <script defer src="js/glide.min.js"></script>
     <script defer src="js/carousel.js"></script>
-    <script defer src="bootstrap/dist/js/bootstrap.js"></script>
+    <script defer src="bootstrap/dist/js/bootstrap.bundle.js"></script>
 </head>
 
 <body>
@@ -44,23 +45,31 @@
     <!-- begin::Header -->
     <header class="header">
         <div class="container">
-            <div class="header__logo">
-                <a href="https://fricoalimentos.com.br" title="Fricó Alimentos">
-                    <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/logo.png"
-                        alt="Logo Fricó">
-                </a>
-            </div>
-            <!-- begin::Menu Hamburger -->
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <!-- end::Menu Hamburger -->
             <nav class="navbar navbar-expand-lg">
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav mr-auto">
+                <div class="header__logo">
+                    <a href="https://fricoalimentos.com.br" title="Fricó Alimentos">
+                        <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/logo.png"
+                            alt="Logo Fricó">
+                    </a>
+                </div>
+
+                <!-- begin::Menu Hamburger -->
+                <button class="navbar-toggler hamburger collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Abrir menu Cabeçalho">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- end::Menu Hamburger -->
+                
+                <div class="header__search" id="search__icon--mobile">
+                    <button type="button" class="open__search--header">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarHeader">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item menu-item">
                             <a class="nav-link" href="about.html">Sobre Nós</a>
                         </li>
@@ -78,15 +87,17 @@
                         </li>
                     </ul>
                 </div>
+                
+                <div class="header__search" id="search__icon--desktop">
+                    <button type="button" class="open__search--header">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
             </nav>
-            <div class="header__search">
-                <button type="button" class="open__search--header">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
         </div>
     </header>
     <!-- end::Header -->
+
 
     <section class="banner__breadcrumbs">
         <figure><img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/about.jpg" alt=""></figure>
@@ -165,7 +176,7 @@
         <div class="container">
             <h2>Nossos Princípios</h2>
             <div class="row">
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="principle__item">
                         <figure>
                             <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/p1.svg" alt="">
@@ -173,7 +184,7 @@
                         <p>Encantar os clientes com produtos de alta qualidade</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="principle__item">
                         <figure>
                             <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/p1.svg" alt="">
@@ -181,7 +192,7 @@
                         <p>Encantar os clientes com produtos de alta qualidade</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="principle__item">
                         <figure>
                             <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/p1.svg" alt="">
@@ -189,7 +200,7 @@
                         <p>Encantar os clientes com produtos de alta qualidade</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="principle__item">
                         <figure>
                             <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/p1.svg" alt="">
@@ -197,7 +208,7 @@
                         <p>Encantar os clientes com produtos de alta qualidade</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="principle__item">
                         <figure>
                             <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/p1.svg" alt="">
@@ -205,7 +216,7 @@
                         <p>Encantar os clientes com produtos de alta qualidade</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="principle__item">
                         <figure>
                             <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/p1.svg" alt="">
@@ -213,7 +224,7 @@
                         <p>Encantar os clientes com produtos de alta qualidade</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="principle__item">
                         <figure>
                             <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/p1.svg" alt="">
@@ -221,7 +232,7 @@
                         <p>Encantar os clientes com produtos de alta qualidade</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="principle__item">
                         <figure>
                             <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/p1.svg" alt="">
@@ -229,7 +240,7 @@
                         <p>Encantar os clientes com produtos de alta qualidade</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="principle__item">
                         <figure>
                             <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/p1.svg" alt="">
@@ -237,7 +248,7 @@
                         <p>Encantar os clientes com produtos de alta qualidade</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="principle__item">
                         <figure>
                             <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/p1.svg" alt="">
@@ -245,7 +256,7 @@
                         <p>Encantar os clientes com produtos de alta qualidade</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="principle__item">
                         <figure>
                             <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/p1.svg" alt="">
@@ -253,7 +264,7 @@
                         <p>Encantar os clientes com produtos de alta qualidade</p>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="principle__item">
                         <figure>
                             <img src="https://fricoalimentos.com.br/wp-content/themes/frico-alimentos-2020/assets/images/about/p1.svg" alt="">

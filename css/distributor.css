@@ -1,0 +1,109 @@
+.text__breadcrumbs{
+    color: var(--primary);
+}
+
+.distributor{
+    margin-bottom: 100px;
+}
+
+.distributor__content h2{
+    color: var(--primary);
+}
+.distributor__content p{
+    font-weight: 300;
+    line-height: 1.6;
+    margin-top: 30px;
+    margin-right: 50px;
+    text-align: justify;
+    color: #5c5c5c;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 0.2px;
+}
+
+.distributor__content .btn{
+    margin-top: 35px;
+    padding: 12px 25px;
+}
+
+.distributor-text__image {
+    position: relative;
+    margin-top: 100px;
+}
+
+.distributor-text__image figure {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
+.distributor-text__image figure img{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+/* Form */
+.distributor__content h3{
+    color: var(--primary);
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+form .input__text {
+    position: relative;
+}
+
+form .input__text input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--primary);
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    background: transparent;
+    transition: all .4s ease;
+}
+form .input__text label,
+form textarea ~ label {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--primary);
+    pointer-events: none;
+    transition: .5s;
+}
+
+form .input__text input:focus,
+form select:focus,
+form textarea:focus{
+    border-bottom: 1px solid var(--primary);
+}
+form .input__text input:focus ~ label{
+    top: -20px;
+    left: 15px;
+    color: var(--primary);
+    font-size: 12px;
+}
+
+form textarea{
+    margin-top: 15px;
+}
+form textarea ~ label{
+    font-size: 12px!important;
+    top: -5px!important;
+    left: 15px!important;
+}
+
+form button[type="submit"]{
+    display: block;
+    margin: 0 auto;
+}
+/* Form */
